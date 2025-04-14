@@ -578,70 +578,57 @@ with st.form("survey"):
         total_cosine_similarity_conservative = total_cosine_similarity(normalized_inputs, conservative_positions)
         total_cosine_similarity_ndp = total_cosine_similarity(normalized_inputs, ndp_positions)
         
-        st.markdown("## Weighted Euclidean Distance")
-        st.metric("Liberal Party", round(total_euclidean_distance_liberal, 3))
-        st.metric("Conservative Party", round(total_euclidean_distance_conservative, 3))
-        st.metric("NDP", round(total_euclidean_distance_ndp, 3))
-
-        euclidean_scores = {
-            'Liberal Party':  total_euclidean_distance_liberal,
-            'Conservative Party': total_euclidean_distance_conservative,
-            'NDP': total_euclidean_distance_ndp
-        }
-
-        euclidean_furthest, euclidean_furthest_value = max(euclidean_scores.items(), key=lambda item: item[1])
-        euclidean_closest, euclidean_closest_value = min(euclidean_scores.items(), key=lambda item: item[1])
-        # Euclidean Results Summary Box
-        st.markdown("### Euclidean Distance Summary")
-
         col1, col2 = st.columns(2)
-
         with col1:
-            st.success(f"**Closest Party:** {euclidean_closest}")
+            st.markdown("## Weighted Euclidean Distance")
+            st.metric("Liberal Party", round(total_euclidean_distance_liberal, 3))
+            st.metric("Conservative Party", round(total_euclidean_distance_conservative, 3))
+            st.metric("NDP", round(total_euclidean_distance_ndp, 3))
 
-        with col2:
+            euclidean_scores = {
+                'Liberal Party':  total_euclidean_distance_liberal,
+                'Conservative Party': total_euclidean_distance_conservative,
+                'NDP': total_euclidean_distance_ndp
+            }
+
+            euclidean_furthest, euclidean_furthest_value = max(euclidean_scores.items(), key=lambda item: item[1])
+            euclidean_closest, euclidean_closest_value = min(euclidean_scores.items(), key=lambda item: item[1])
+
+            st.markdown("### Euclidean Distance Summary")
+            st.success(f"**Closest Party:** {euclidean_closest}")
             st.error(f"**Furthest Party:** {euclidean_furthest}")
 
-        st.markdown(
+            st.markdown(
             f"""
             Your views are **closest** to the *{euclidean_closest}* based on the weighted Euclidean distance.
             A lower score means you're **closer** in position to that party across all topics .
             """
-        )
-
-
-        st.markdown("## Weighted Cosine Similarity")
-        st.metric("Liberal Party", round(total_cosine_similarity_liberal, 3))
-        st.metric("Conservative Party", round(total_cosine_similarity_conservative, 3))
-        st.metric("NDP", round(total_cosine_similarity_ndp, 3))
-
-        cosine_scores = {
-            'Liberal Party':  total_cosine_similarity_liberal,
-            'Conservative Party': total_cosine_similarity_conservative,
-            'NDP': total_cosine_similarity_ndp
-        }
-
-        cosine_closest, cosine_closest_value = max(cosine_scores.items(), key=lambda item: item[1])
-        cosine_furthest, cosine_furthest_value = min(cosine_scores.items(), key=lambda item: item[1])
-
-
-        # Cosine Similarity Results Summary Box
-        st.markdown("### Cosine Similarity Summary")
-
-        col1, col2 = st.columns(2)
-
-        with col1:
-            st.success(f"**Closest Party:** {cosine_closest}")
+            )
 
         with col2:
-            st.error(f"**Furthest Party:** {cosine_furthest}")
+            st.markdown("## Weighted Cosine Similarity")
+            st.metric("Liberal Party", round(total_cosine_similarity_liberal, 3))
+            st.metric("Conservative Party", round(total_cosine_similarity_conservative, 3))
+            st.metric("NDP", round(total_cosine_similarity_ndp, 3))
 
-        st.markdown(
+            cosine_scores = {
+                'Liberal Party':  total_cosine_similarity_liberal,
+                'Conservative Party': total_cosine_similarity_conservative,
+                'NDP': total_cosine_similarity_ndp
+            }
+
+            cosine_closest, cosine_closest_value = max(cosine_scores.items(), key=lambda item: item[1])
+            cosine_furthest, cosine_furthest_value = min(cosine_scores.items(), key=lambda item: item[1])
+
+            st.markdown("### Cosine Similarity Summary")
+            st.success(f"**Closest Party:** {cosine_closest}")
+            st.error(f"**Furthest Party:** {cosine_furthest}")
+            st.markdown(
             f"""
             Based on directional similarity, your views are **most aligned** with *{cosine_closest}*.
             A score closer to **1.0** means your weighted policy vector points in a same direction in the multi-dimensional vector space.
             """
-        )
+            )
 
         st.markdown("## Per Topic Comparison")
 
