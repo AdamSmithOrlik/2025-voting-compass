@@ -455,7 +455,7 @@ with st.expander("Methods", expanded=False):
                 - Immigration
                 - Indigenous Rights
                 - LGBTQ+ Rights
-                - Homleessness and Drug Addiction
+                - Homelessness and Drug Addiction
                 - Diversity, Equity, and Inclusion
             3. Foreign Policy
                 - Military Spending
@@ -467,10 +467,10 @@ with st.expander("Methods", expanded=False):
             4. Environment
                 - Emissions
                 - Carbon Tax
-                - Fossil Feuls 
+                - Fossil Fuels 
                 - Green Investment
             5. Justice and Civil Liberty
-                - Crinimal Justice 
+                - Criminal Justice 
                 - Civil Liberties 
                 - Free Speech 
                 - Police Reform
