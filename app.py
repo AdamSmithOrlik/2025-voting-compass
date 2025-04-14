@@ -728,7 +728,7 @@ with st.form("survey"):
 
         st.markdown(
             """
-            The follow plot shows your mean **unweighted** topic position compared to the party positions. 
+            The follow plot shows your mean **weighted** topic position compared to the party positions. 
 
             The center of the plot represents the -1 positions and the outer edge represents the +1 positions. 
             """
