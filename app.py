@@ -639,7 +639,7 @@ with st.form("survey"):
         st.markdown(
             f"""
             Based on directional similarity, your views are **most aligned** with *{cosine_closest}*.
-            A score closer to **1.0** means your weighted **policy vector points in a similar direction**.
+            A score closer to **1.0** means your weighted policy vector points in a same direction in the multi-dimensional vector space.
             """
         )
 
