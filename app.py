@@ -410,7 +410,7 @@ st.markdown("""### Author: Adam Smith-Orlik""")
 st.markdown(
     """
     ### Introduction
-    Welcome to the 2025 Canadian Federal Elections Compass—a data-driven and bias-mitigating tool to help quantify your political prefereneces and compare with the positions of the major parties in the upcoming elections. The party positions are based on AI-generated estimates from multiple models, and the compass allows you to assign weights to the topics that matter most to you. For detailed infromation on how the compass was designed see my blog post [here](<insert blog link>) and the source code is available [here](https://github.com/AdamSmithOrlik/2025-voting-compass).
+    Welcome to the 2025 Canadian Federal Elections Compass—a data-driven and bias-mitigating tool to help quantify your political prefereneces and compare with the positions of the major parties in the upcoming elections. The party positions are based on AI-generated estimates from multiple models, and the compass allows you to assign weights to the topics that matter most to you. For detailed infromation on how the compass was designed see my blog post [here](https://medium.com/@asorlik/algorithmic-alignment-making-a-better-voting-compass-with-ai-e373cac3256e) and the source code is available [here](https://github.com/AdamSmithOrlik/2025-voting-compass).
     """
 )
 
