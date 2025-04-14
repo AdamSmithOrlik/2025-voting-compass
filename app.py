@@ -404,17 +404,19 @@ def plot_pca_3d(user_positions, party_positions_dict, title="3D PCA: Political A
 st.set_page_config(page_title="2025 Elections Compass", layout="wide")
 
 st.title("2025 Canadian Federal Elections Compass")
-st.markdown("""### by Adam Smith-Orlik""")
+st.markdown("""### Author: Adam Smith-Orlik""")
 
 # Introduction
 st.markdown(
     """
     ### Introduction
-    Welcome to the 2025 Canadian Federal Elections Compass—a data-driven and bias-mitigating tool to help quantify your political prefereneces and compare with the positions of the major parties in the upcoming elections. The party positions are based on AI-generated estimates from multiple models, and the compass allows you to assign weights to the topics that matter most to you. For detailed infromation on how the compass was designed see my blog post [here](<insert blog link>).
+    Welcome to the 2025 Canadian Federal Elections Compass—a data-driven and bias-mitigating tool to help quantify your political prefereneces and compare with the positions of the major parties in the upcoming elections. The party positions are based on AI-generated estimates from multiple models, and the compass allows you to assign weights to the topics that matter most to you. For detailed infromation on how the compass was designed see my blog post [here](<insert blog link>) and the source code is available [here](https://github.com/AdamSmithOrlik/2025-voting-compass).
     """
 )
 
 st.markdown("☕  **If you find this app useful please consider supporting me:** [Buy me a coffee](https://buymeacoffee.com/adamsmithorlik)")
+
+st.markdown("NOTE: Your answers are not stored and are only used to compute the distance metrics. The app does not track or store any personal information.")
 
 # drop down menus
 with st.expander("How to Use this Compass", expanded=False):
