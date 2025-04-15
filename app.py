@@ -410,7 +410,7 @@ st.markdown("""### Author: Adam Smith-Orlik""")
 st.markdown(
     """
     ### Introduction
-    Welcome to the 2025 Canadian Federal Elections Compass—a data-driven and bias-mitigating tool to help quantify your political prefereneces and compare with the positions of the major parties in the upcoming elections. The party positions are based on AI-generated estimates from multiple models, and the compass allows you to assign weights to the topics that matter most to you. For detailed infromation on how the compass was designed see my blog post [here](https://medium.com/@asorlik/algorithmic-alignment-making-a-better-voting-compass-with-ai-e373cac3256e) and the source code is available [here](https://github.com/AdamSmithOrlik/2025-voting-compass).
+    Welcome to the 2025 Canadian Federal Elections Compass—a data-driven and bias-mitigating tool to help quantify your political prefrences and compare with the positions of the major parties in the upcoming elections. The party positions are based on AI-generated estimates from multiple models, and the compass allows you to assign weights to the topics that matter most to you. For detailed infromation on how the compass was designed see my blog post [here](https://medium.com/@asorlik/algorithmic-alignment-making-a-better-voting-compass-with-ai-e373cac3256e) and the source code is available [here](https://github.com/AdamSmithOrlik/2025-voting-compass).
     """
 )
 
@@ -430,14 +430,14 @@ with st.expander("How to Use this Compass", expanded=False):
 with st.expander("Motivation", expanded=False):
     st.markdown(
         """
-        Using other online compasses I noticed that the questions posed were leading, too specific for someone who is not a politics wonk, overly focused on hot-button issues, or simply not representative of most peoples politcal values. What is more, there was no clear way to quantify the importnace of some topics over others. I wanted to create a compass that better captures the full spectrum of politcal values and allows the user to assign weights to topics that matter the most to them.
+        Using other online compasses I noticed that the questions posed were leading, too specific for someone who is not a politics wonk, overly focused on hot-button issues, or simply not representative of most peoples politcal values. What is more, there was no clear way to quantify the importance of some topics over others. I wanted to create a compass that better captures the full spectrum of politcal values and allows the user to assign weights to topics that matter the most to them.
         """
     )
 
 with st.expander("Methods", expanded=False):
     st.markdown(
         """
-        In the interest of transparency I will describe exactly how the compass operates, and for those interested the full code with be availble publically at <Github Link Here>. 
+        In the interest of transparency I will describe exactly how the compass operates, and for those interested the full code with be availble publically at https://github.com/AdamSmithOrlik/2025-voting-compass. 
 
         ## Topic Selection 
         - The compass is based on a set of 7 topics with subtopics that are relevant to the Canadian political landscape:
@@ -485,7 +485,7 @@ with st.expander("Methods", expanded=False):
                 - Federalism 
 
         ## User Input
-        The compass asks the use to rate their position on each of the abovementioned subtopics on a scale from -1 to 1 representing the extreme positions (as articualted below) and where 0 is the status quo.
+        The compass asks the use to rate their position on each of the abovementioned subtopics on a scale from -1 to 1 representing the extreme positions (as articulated below) and where 0 is the status quo.
 
         The use will also be asked to rate the subtopic from 0 to 1 representing the importance of that subtopic to their overall political position. E.g. a single issue voter is free to set one subtopic to 1 and the rest to 0. 
 
@@ -493,7 +493,7 @@ with st.expander("Methods", expanded=False):
         In an effort to be as unbiased as possible I have used AI to estimate the current party positions from online sources. Further, I have used 3 different AI models--ChatGPT, Claude, and Perplexity--and aggreagated the results to get a more accurate picture of the party positions.
 
         ## Distance Metrics 
-        I elect to use two different metrics the measure the distance between the users responses and the party positions. 1) Weighted Euclidean distance and 2) weighted Cosine Similarity. For more detial please see my blog post <link here>. 
+        I elect to use two different metrics the measure the distance between the users responses and the party positions. 1) Weighted Euclidean distance and 2) weighted Cosine Similarity. For more detial please see my [blog post](https://medium.com/@asorlik/algorithmic-alignment-making-a-better-voting-compass-with-ai-e373cac3256e). 
 
         - The weighted Euclidean distance returns a result ranging from 0 (perflectly overlapping values) to 1 (maximally distant values).
         - The weighted Cosine Similarity returns a result ranging from -1 (anti-aligned) to 1 (perfectly aligned).
