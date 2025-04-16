@@ -13,27 +13,31 @@ data_path = os.path.join(os.path.dirname(__file__), 'data')
 
 ## Helper functions
 def render_subtopic_input(topic_name, subtopic_name, desc_neg1, desc_pos1):
-    st.markdown(f"### {topic_name} — {subtopic_name}")
-    st.markdown(f"-1: *{desc_neg1}*")
-    st.markdown(f"+1: *{desc_pos1}*")
+    st.divider()
+    col1, col2 = st.columns(2)
+    with col1:
+        st.markdown(f"### {topic_name} — {subtopic_name}")
+        st.markdown(f"-1: *{desc_neg1}*")
+        st.markdown(f"+1: *{desc_pos1}*")
 
-    position = st.slider(
-        f"Select your stance on {subtopic_name}",
-        min_value=-1.0,
-        max_value=1.0,
-        value=0.0,
-        step=0.05,
-        key=f"{topic_name}_{subtopic_name}_position"
-    )
+    with col2:
+        position = st.slider(
+            f"Select your stance on {subtopic_name}",
+            min_value=-1.0,
+            max_value=1.0,
+            value=0.0,
+            step=0.05,
+            key=f"{topic_name}_{subtopic_name}_position"
+        )
 
-    weight = st.slider(
-        f"How important is {subtopic_name} to you?",
-        min_value=0.0,
-        max_value=1.0,
-        value=1.0,
-        step=0.05,
-        key=f"{topic_name}_{subtopic_name}_weight"
-    )
+        weight = st.slider(
+            f"How important is {subtopic_name} to you?",
+            min_value=0.0,
+            max_value=1.0,
+            value=1.0,
+            step=0.05,
+            key=f"{topic_name}_{subtopic_name}_weight"
+        )
 
     return {
         'position': position,
