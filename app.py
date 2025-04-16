@@ -406,16 +406,15 @@ st.set_page_config(page_title="2025 Elections Compass", layout="wide")
 st.title("2025 Canadian Federal Elections Compass")
 st.markdown("""### Author: Adam Smith-Orlik""")
 
-st.markdown("""Updates April 15, 2025:
+st.markdown("""
 
-    - Fixed Religious Liberty scale to reflect the correct Left/Right positions
+    **Updates April 15, 2025:**
 
-    - Fixed Conservative positions for Military Spending and Foreign Aid
-
-    - Added a legend to visuals
-
-    - Minor aesthetic changes to Radar Plot
-        """)
+        1. Fixed Religious Liberty scale to reflect the correct Left/Right positions
+        2. Fixed Conservative positions for Military Spending and Foreign Aid
+        3. Added a legend to visuals
+        4. Minor aesthetic changes to Radar Plot
+      """)
 
 # Introduction
 st.markdown(
