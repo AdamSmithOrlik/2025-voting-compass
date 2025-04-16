@@ -1,0 +1,235 @@
+subtopic: Taxation
+- *Justification:* The NDP advocates for progressive taxation, including increasing taxes on the wealthy and implementing new taxes on financial institutions. ([en.wikipedia.org](https://en.wikipedia.org/wiki/New_Democratic_Party?utm_source=openai))
+   - *Position:* +0.8
+
+subtopic: Spending
+- *Justification:* The NDP supports expansive public investment, such as funding for affordable housing and social programs like dental care. ([en.wikipedia.org](https://en.wikipedia.org/wiki/New_Democratic_Party?utm_source=openai))
+   - *Position:* +0.7
+
+subtopic: Minimum Wage
+- *Justification:* The NDP proposes a $20/hour minimum wage, indicating a commitment to substantially increasing the minimum wage. ([en.wikipedia.org](https://en.wikipedia.org/wiki/Jagmeet_Singh?utm_source=openai))
+   - *Position:* +0.9
+
+subtopic: Fiscal Discipline
+- *Justification:* The NDP supports flexible deficits to fund social programs, as evidenced by their backing of increased spending on healthcare and housing. ([en.wikipedia.org](https://en.wikipedia.org/wiki/New_Democratic_Party?utm_source=openai))
+   - *Position:* +0.6
+
+subtopic: Labour Policy
+- *Justification:* The NDP emphasizes strengthening unions and protecting workers' rights, including advocating for labour reforms for federally regulated workers. ([en.wikipedia.org](https://en.wikipedia.org/wiki/New_Democratic_Party?utm_source=openai))
+   - *Position:* +0.8
+
+
+```python
+{
+    "Taxation": +0.8,
+    "Spending": +0.7,
+    "MinimumWage": +0.9,
+    "FiscalDiscipline": +0.6,
+    "LabourPolicy": +0.8
+}
+```
+
+subtopic: Healthcare
+- *Justification:* The NDP advocates for a fully public healthcare system, including the implementation of universal pharmacare and dental care programs, aiming to ensure comprehensive access for all Canadians. ([en.wikipedia.org](https://en.wikipedia.org/wiki/New_Democratic_Party?utm_source=openai))
+   - *Position:* +1.0
+
+subtopic: Education
+- *Justification:* The NDP supports public education as a right, proposing measures such as tuition-free post-secondary education and increased funding for public schools to enhance accessibility and quality. ([policyalternatives.ca](https://www.policyalternatives.ca/news-research/platform-crunch-ndp-releases-commitments-ahead-of-anticipated-federal-election-call/?utm_source=openai))
+   - *Position:* +1.0
+
+subtopic: Curriculum Control
+- *Justification:* The NDP emphasizes inclusive curricula that reflect social diversity, advocating for updates to educational content to include Indigenous, Métis, and Acadian histories, and working with Mi'kmaq leaders to incorporate their experiences. ([votemate.org](https://votemate.org/pei2023/parties/182?utm_source=openai))
+   - *Position:* +1.0
+
+subtopic: Housing
+- *Justification:* The NDP proposes aggressive public housing initiatives, including the creation of at least 500,000 units of affordable housing over ten years, and supports rent control measures to address housing affordability. ([policyalternatives.ca](https://www.policyalternatives.ca/news-research/platform-crunch-ndp-releases-commitments-ahead-of-anticipated-federal-election-call/?utm_source=openai))
+   - *Position:* +1.0
+
+subtopic: Indigenous
+- *Justification:* The NDP commits to nation-to-nation relationships with Indigenous peoples, supporting land restitution and the adoption of the United Nations Declaration on the Rights of Indigenous Peoples (UNDRIP) to advance reconciliation efforts. ([policyalternatives.ca](https://www.policyalternatives.ca/news-research/platform-crunch-ndp-releases-commitments-ahead-of-anticipated-federal-election-call/?utm_source=openai))
+   - *Position:* +1.0
+
+
+```python
+{
+    "Healthcare": 1.0,
+    "Education": 1.0,
+    "CurriculumControl": 1.0,
+    "Housing": 1.0,
+    "Indigenous": 1.0
+}
+```
+
+subtopic: Immigration
+- *Justification:* The NDP's recent platforms and public statements do not provide explicit positions on immigration policies within the 2023–2025 timeframe.
+   - *Position:* 0.0
+
+subtopic: LGBTQ
+- *Justification:* The NDP has consistently advocated for strong legal protections and inclusive policies for LGBTQ individuals, including efforts to ban conversion therapy and support for adding gender identity and expression to the Canadian Human Rights Code. ([en.wikipedia.org](https://en.wikipedia.org/wiki/Randall_Garrison?utm_source=openai))
+   - *Position:* 0.9
+
+subtopic: Drugs
+- *Justification:* The NDP has supported viewing addiction as a public health issue, advocating for harm reduction strategies and the elimination of criminal records for simple possession of drugs. ([en.wikipedia.org](https://en.wikipedia.org/wiki/Randall_Garrison?utm_source=openai))
+   - *Position:* 0.7
+
+subtopic: DEI (Diversity, Equity, and Inclusion)
+- *Justification:* The NDP has demonstrated support for DEI initiatives, including efforts to add LGBTQ communities to the Employment Equity Act and advocating for affirmative action in hiring practices. ([en.wikipedia.org](https://en.wikipedia.org/wiki/Randall_Garrison?utm_source=openai))
+   - *Position:* 0.8
+
+
+```python
+{
+    "Immigration": 0.0,
+    "LGBTQ": 0.9,
+    "Drugs": 0.7,
+    "DEI": 0.8
+}
+```
+
+subtopic: Emissions
+- *Justification:* The NDP aims to reduce Canada's carbon emissions to 50% below 2005 levels by 2030, exceeding international targets. ([policyalternatives.ca](https://www.policyalternatives.ca/news-research/platform-crunch-ndp-releases-commitments-ahead-of-anticipated-federal-election-call/?utm_source=openai))
+   - *Position:* +0.9
+
+subtopic: Carbon Tax
+- *Justification:* The NDP supports carbon pricing as a tool to combat climate change, indicating alignment with the view that a carbon tax is essential. ([ndp.ca](https://www.ndp.ca/climate-action?focus=13934135&utm_source=openai))
+   - *Position:* +0.8
+
+subtopic: Fossil Fuels
+- *Justification:* The NDP opposes projects like the Trans Mountain Pipeline expansion and advocates for ending fossil fuel subsidies, suggesting a commitment to phasing out fossil fuels. ([our-time.ca](https://our-time.ca/ndp-platform/?utm_source=openai))
+   - *Position:* +0.8
+
+subtopic: Green Investment
+- *Justification:* The NDP proposes significant public investment in clean energy, energy efficiency, and low-carbon infrastructure, indicating strong support for government-led green initiatives. ([policyalternatives.ca](https://www.policyalternatives.ca/news-research/platform-crunch-ndp-releases-commitments-ahead-of-anticipated-federal-election-call/?utm_source=openai))
+   - *Position:* +0.9
+
+
+```python
+{
+    "Emissions": +0.9,
+    "CarbonTax": +0.8,
+    "FossilFuels": +0.8,
+    "GreenInvestment": +0.9
+}
+```
+
+subtopic: SpendingMilitary
+- *Justification:*
+     The NDP has historically advocated for reallocating military spending towards social programs, healthcare, and education. During the 2019 federal election, their platform called for a shift in military spending towards peacekeeping and humanitarian missions. ([canada.isidewith.com](https://canada.isidewith.com/parties/new-democratic/policies/foreign-policy/military-spending-4?utm_source=openai))
+   - *Position:*
+     -0.5
+
+subtopic: RefugeePolicy
+- *Justification:*
+     The NDP has consistently supported expanding humanitarian responses and upholding Canada's global responsibility towards refugees. Their platforms have emphasized the need for Canada to play a significant role in providing refuge and support to those in need. ([journals.sagepub.com](https://journals.sagepub.com/doi/10.1177/00207020231178922?utm_source=openai))
+   - *Position:*
+     0.5
+
+subtopic: Aid
+- *Justification:*
+     The NDP has committed to increasing foreign aid spending to meet the UN target of 0.7% of gross national income. Their platform includes plans to boost funding for global health efforts, gender equality, and climate change mitigation in low-income countries. ([globalcitizen.org](https://www.globalcitizen.org/en/content/canada-elections-foreign-aid/?utm_source=openai))
+   - *Position:*
+     0.5
+
+
+```python
+{
+    "SpendingMilitary": -0.5,
+    "RefugeePolicy": 0.5,
+    "Aid": 0.5
+}
+```
+
+subtopic: Trade
+- *Justification:* The NDP has expressed concerns about the secretive nature of trade agreements like the Trans-Pacific Partnership (TPP) and has advocated for transparency and the inclusion of social and environmental rights in trade deals. ([journals.sagepub.com](https://journals.sagepub.com/doi/10.1177/00207020231178922?utm_source=openai))
+   - *Position:* -0.3
+
+subtopic: Israel-Palestine
+- *Justification:* The NDP has taken a strong stance in support of Palestinian rights, including introducing a motion in Parliament to recognize Palestinian statehood and suspend military trade with Israel. ([reuters.com](https://www.reuters.com/world/canada-parliament-vote-motion-backing-palestinian-statehood-2024-03-18/?utm_source=openai))
+   - *Position:* 0.8
+
+subtopic: Ukraine-Russia
+- *Justification:* The NDP has condemned Russia's aggression against Ukraine and urged the Canadian government to expand economic sanctions and target the wealth of Russian oligarchs. ([en.wikipedia.org](https://en.wikipedia.org/wiki/Non-government_reactions_to_the_Russian_invasion_of_Ukraine?utm_source=openai))
+   - *Position:* 0.7
+
+
+```python
+{
+    "Trade": -0.3,
+    "IsraelPalestine": 0.8,
+    "UkraineRussia": 0.7
+}
+```
+
+subtopic: CriminalJustice
+- Justification: The NDP advocates for reducing reliance on mandatory minimum sentences, increasing judicial discretion, and enhancing restorative justice programs, indicating a focus on addressing systemic causes of crime. ([ndp.ca](https://www.ndp.ca/courage?focus=13934159&utm_source=openai))
+   - Position: **0.8**
+
+subtopic: FreeSpeech
+- Justification: There is limited specific information on the NDP's stance regarding government oversight of speech to reduce harm or misinformation.
+   - Position: **0.0**
+
+subtopic: PoliceReform
+- Justification: The NDP supports ending discriminatory policing practices like carding, enhancing community safety through restorative justice, and developing First Nations justice and policing strategies, reflecting a commitment to reforming police funding and investing in community-based alternatives. ([ndp.ca](https://www.ndp.ca/courage?focus=13934159&utm_source=openai))
+   - Position: **0.7**
+
+subtopic: ReligiousLiberty
+- Justification: There is limited specific information on the NDP's stance regarding the balance between freedom of religion and strict secularism in public institutions.
+   - Position: **0.0**
+
+
+```python
+{
+    "CriminalJustice": 0.8,
+    "FreeSpeech": 0.0,
+    "PoliceReform": 0.7,
+    "ReligiousLiberty": 0.0
+}
+```
+
+subtopic: Research
+- Justification: The NDP supports public funding for research, as evidenced by their commitment to expanding public health care services, including dental care, mental health care, and prescription drugs, which implies a reliance on publicly funded research to improve health outcomes. ([en.wikipedia.org](https://en.wikipedia.org/wiki/New_Democratic_Party?utm_source=openai))
+   - Position: **0.8**
+
+subtopic: AI
+- Justification: The NDP advocates for proactive government regulation of artificial intelligence to ensure ethical use, highlighting concerns about privacy, data collection, and surveillance. ([carolhughes.ndp.ca](https://carolhughes.ndp.ca/news/artificial-intelligence-needs-regulation-catch?utm_source=openai))
+   - Position: **0.9**
+
+subtopic: Internet
+- Justification: While the NDP has expressed support for public services and infrastructure, specific positions on universal internet access as a public good are not clearly defined in the available sources.
+   - Position: **0.0**
+
+subtopic: Privacy
+- Justification: The NDP supports stricter regulations on the collection and use of personal data by companies, emphasizing the need for transparency and user consent. ([canada.isidewith.com](https://canada.isidewith.com/parties/new-democratic/policies/technological?utm_source=openai))
+   - Position: **0.9**
+
+
+```python
+{
+    "Research": 0.8,
+    "AI": 0.9,
+    "Internet": 0.0,
+    "Privacy": 0.9
+}
+```
+
+subtopic: Electoral
+- Justification: The NDP has consistently advocated for replacing the First Past the Post system with proportional representation, including introducing Motion M-86 in June 2023 to establish a National Citizens' Assembly on Electoral Reform. ([ndp.ca](https://ndp.ca/electoral-reform?utm_source=openai))
+   - Position: 0.9
+
+subtopic: Transparency
+- Justification: The NDP has emphasized the need for government transparency and accountability, as demonstrated by their call for Elections Canada to investigate allegations of bot farms influencing political discourse. ([en.wikipedia.org](https://en.wikipedia.org/wiki/Lisa_Marie_Barron?utm_source=openai))
+   - Position: 0.7
+
+subtopic: Federalism
+- Justification: There is insufficient recent information to clearly define the NDP's stance on the balance of power between federal and provincial governments.
+   - Position: 0.0
+
+
+```python
+{
+    "Electoral": 0.9,
+    "Transparency": 0.7,
+    "Federalism": 0.0
+}
+```
+

@@ -1,15 +1,22 @@
 # 2025 Canadian Federal Election Compass
 
 **Author**: Adam Smith-Orlik  
-**Version**: 1.0.2  
-**Last Updated**: April 15, 2025
+**Version**: 1.0.3  
+**Last Updated**: April 16, 2025
 
 **Updates**
+April 15, 2025
 
 1. Fixed Religious Liberty scale to reflect the correct Left/Right positions
 2. Fixed Conservative positions for Military Spending and Foreign Aid
 3. Added a legend to visuals
 4. Minor aesthetic changes to Radar Plot
+
+April 16, 2025
+
+1. Added GPT-API results with justifications for tranparency
+2. Added button before survey to change the party position data
+3. GPT responses saved for fact chacking in the GPT-API/data/ folder
 
 ---
 

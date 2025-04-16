@@ -1,0 +1,229 @@
+subtopic: Taxation
+- Justification: The Liberal Party has proposed increasing taxes on the wealthiest Canadians, including raising the capital gains inclusion rate for individuals earning over $250,000, while also planning to reduce the lowest income tax bracket from 15% to 14%. ([apnews.com](https://apnews.com/article/2be2ba49c0f277a397c3e90dd490e828?utm_source=openai), [en.wikipedia.org](https://en.wikipedia.org/wiki/2025_Canadian_federal_election?utm_source=openai))
+   - Position: **0.3**
+
+subtopic: Spending
+- Justification: The party has committed to significant public investments, such as a $6 billion housing infrastructure fund and a $1.5 billion rental protection fund, indicating a preference for expansive public spending. ([theepochtimes.com](https://www.theepochtimes.com/world/analysis-key-legislative-areas-parties-will-focus-on-in-the-coming-year-5636267?utm_source=openai))
+   - Position: **0.5**
+
+subtopic: Minimum Wage
+- Justification: There is no recent, specific information available regarding the Liberal Party's stance on minimum wage policies.
+   - Position: **0.0**
+
+subtopic: Fiscal Discipline
+- Justification: The party has shown a willingness to run deficits to fund social programs and infrastructure projects, suggesting a flexible approach to fiscal discipline. ([theepochtimes.com](https://www.theepochtimes.com/world/analysis-key-legislative-areas-parties-will-focus-on-in-the-coming-year-5636267?utm_source=openai))
+   - Position: **0.4**
+
+subtopic: Labour Policy
+- Justification: The Liberal Party has implemented measures like providing 10 days of paid sick leave and supporting union training programs, indicating support for strengthening labor protections. ([liberal.ca](https://liberal.ca/our-platform/strong-economic-development/?utm_source=openai))
+   - Position: **0.5**
+
+
+```python
+{
+    "Taxation": 0.3,
+    "Spending": 0.5,
+    "MinimumWage": 0.0,
+    "FiscalDiscipline": 0.4,
+    "LabourPolicy": 0.5
+}
+```
+
+subtopic: Healthcare
+- *Justification:* The Liberal Party has consistently supported universal public healthcare, as evidenced by their introduction of the Canada Dental Care Plan in December 2023, aiming to expand public healthcare services. ([en.wikipedia.org](https://en.wikipedia.org/wiki/2023_Canadian_federal_budget?utm_source=openai))
+   - *Position:* +0.8
+
+subtopic: Education
+- *Justification:* The party has increased funding for Canada Student Grants by 40% in 2023, indicating a commitment to accessible public education. ([en.wikipedia.org](https://en.wikipedia.org/wiki/2023_Canadian_federal_budget?utm_source=openai))
+   - *Position:* +0.7
+
+subtopic: CurriculumControl
+- *Justification:* There is no specific information available regarding the Liberal Party's stance on curriculum control within the provided sources.
+   - *Position:* 0.0
+
+subtopic: Housing
+- *Justification:* The Liberals have proposed eliminating the Goods and Services Tax for first-time homebuyers on properties under C$1 million and plan to act as a developer to build affordable housing at scale, including on public lands. ([reuters.com](https://www.reuters.com/world/americas/key-promises-main-parties-contesting-canadas-election-2025-04-16/?utm_source=openai))
+   - *Position:* +0.6
+
+subtopic: Indigenous
+- *Justification:* The Liberal Party has emphasized nation-to-nation relationships, investing in housing, education, and health care for Indigenous communities, and implementing the United Nations Declaration on the Rights of Indigenous Peoples Act. ([pm.gc.ca](https://www.pm.gc.ca/en/news/news-releases/2024/04/23/fairer-future-every-generation-indigenous-peoples?utm_source=openai))
+   - *Position:* +0.8
+
+
+```python
+{
+    "Healthcare": 0.8,
+    "Education": 0.7,
+    "CurriculumControl": 0.0,
+    "Housing": 0.6,
+    "Indigenous": 0.8
+}
+```
+
+subtopic: Immigration
+- *Justification:* In October 2024, the Liberal government announced a reduction in immigration targets, decreasing the number of new permanent residents from 500,000 to 395,000 in 2025, with further reductions planned for subsequent years. ([ft.com](https://www.ft.com/content/95be655b-22e5-408f-8c5b-a99a888401f2?utm_source=openai))
+   - *Position:* -0.2
+
+subtopic: LGBTQ
+- *Justification:* The Liberal Party has committed to supporting the implementation of the Federal LGBTQ2 Action Plan, which includes measures such as banning conversion therapy and promoting inclusivity. ([liberal.ca](https://liberal.ca/our-platform/support-implementation-of-federal-lgbtq2-action-plan/?utm_source=openai))
+   - *Position:* 0.8
+
+subtopic: Drugs
+- *Justification:* The Liberal government legalized cannabis for recreational use in 2018, indicating a progressive stance on drug policy. ([en.wikipedia.org](https://en.wikipedia.org/wiki/Domestic_policy_of_the_Justin_Trudeau_government?utm_source=openai))
+   - *Position:* 0.5
+
+subtopic: DEI (Diversity, Equity, and Inclusion)
+- *Justification:* The Liberal Party has implemented initiatives to improve diversity in the public service, including creating a Diversity Fellowship and offering language programs to racialized employees. ([liberal.ca](https://liberal.ca/our-platform/improving-diversity-in-the-public-service-2/?utm_source=openai))
+   - *Position:* 0.7
+
+
+```python
+{
+    "Immigration": -0.2,
+    "LGBTQ": 0.8,
+    "Drugs": 0.5,
+    "DEI": 0.7
+}
+```
+
+subtopic: Emissions
+- *Justification:* The Liberal Party has committed to capping and reducing emissions from the oil and gas sector, aiming for net-zero emissions by 2050, with specific milestones for 2025 and 2030. ([liberal.ca](https://liberal.ca/our-platform/cap-and-cut-emissions-from-oil-and-gas/?utm_source=openai))
+   - *Position:* +0.8
+
+subtopic: Carbon Tax
+- *Justification:* The Liberal Party has implemented a federal carbon pricing system to reduce pollution, despite facing opposition from Conservative leaders and industry executives. ([reuters.com](https://www.reuters.com/markets/carbon/canadian-opposition-oil-ceos-call-scrapping-federal-carbon-price-system-2025-03-21/?utm_source=openai))
+   - *Position:* +0.7
+
+subtopic: Fossil Fuels
+- *Justification:* The Liberal Party plans to eliminate fossil fuel subsidies and public financing ahead of schedule, aiming to phase them out by 2023 instead of 2025. ([liberal.ca](https://liberal.ca/our-platform/eliminating-subsidies-and-public-financing-for-fossil-fuel/?utm_source=openai))
+   - *Position:* +0.6
+
+subtopic: Green Investment
+- *Justification:* The Liberal Party has invested over $100 billion in fighting climate change and building a clean economy, including $53.6 billion for a green recovery. ([liberal.ca](https://liberal.ca/our-platform/delivering-on-our-climate-commitments/?utm_source=openai))
+   - *Position:* +0.7
+
+
+```python
+{
+    "Emissions": +0.8,
+    "CarbonTax": +0.7,
+    "FossilFuels": +0.6,
+    "GreenInvestment": +0.7
+}
+```
+
+subtopic: SpendingMilitary
+- **Justification:** The Liberal Party has committed to increasing defense spending, aiming to reach 1.76% of GDP by 2030, with significant investments in Arctic sovereignty and military capabilities. ([reuters.com](https://www.reuters.com/world/americas/canada-pressured-us-defence-pledges-more-cash-military-2024-04-08/?utm_source=openai))
+   - **Position:** +0.5
+
+subtopic: RefugeePolicy
+- **Justification:** In 2024, the Liberal government announced a rollback of Canada's foreign worker scheme, aiming to reduce new arrivals significantly, marking a shift from its previous pro-immigration stance. ([ft.com](https://www.ft.com/content/df0b2fd3-a6f7-414e-8496-b71f44729d92?utm_source=openai))
+   - **Position:** -0.3
+
+subtopic: Aid
+- **Justification:** The Liberal Party has pledged to increase humanitarian aid by $150 million in the current fiscal year and $200 million the following year, indicating a commitment to expanding international assistance. ([ctvnews.ca](https://www.ctvnews.ca/politics/liberals-buck-global-trend-in-doubling-down-on-foreign-aid-as-sector-urges-g7-push-1.6852097?utm_source=openai))
+   - **Position:** +0.5
+
+
+```python
+{
+    "SpendingMilitary": 0.5,
+    "RefugeePolicy": -0.3,
+    "Aid": 0.5
+}
+```
+
+subtopic: Trade
+- Justification: The Liberal Party of Canada has demonstrated a commitment to free trade by establishing agreements with all other G7 countries and endorsing initiatives like CANZUK, which promotes free movement and trade among Canada, Australia, New Zealand, and the UK. ([liberal.ca](https://liberal.ca/our-platform/trade-that-works-for-everyone/?utm_source=openai), [canzukinternational.com](https://www.canzukinternational.com/2023/05/liberal-party-of-canada-officially-endorses-canzuk.html?utm_source=openai))
+   - Position: +0.8
+
+subtopic: IsraelPalestine
+- Justification: In March 2024, the Liberal government suspended new arms export permits to Israel and supported a parliamentary motion to limit military exports to Israel and hold extremist Israeli settlers accountable, indicating a shift towards a more balanced approach in the Israel-Palestine conflict. ([larongenow.com](https://larongenow.com/2024/03/19/what-to-know-about-mps-vote-on-palestine-statehood-changes-to-middle-east-policy/?utm_source=openai))
+   - Position: +0.3
+
+subtopic: UkraineRussia
+- Justification: The Liberal Party has expressed strong support for Ukraine, including backing its use of long-range weaponry to counter Russian aggression, underscoring Canada's commitment to Ukraine's defense. ([reuters.com](https://www.reuters.com/world/europe/canada-fully-backs-ukraine-using-long-range-weaponry-says-trudeau-2024-09-13/?utm_source=openai))
+   - Position: +0.9
+
+
+```json
+{
+  "Trade": 0.8,
+  "IsraelPalestine": 0.3,
+  "UkraineRussia": 0.9
+}
+```
+
+subtopic: CriminalJustice
+- Justification: The Liberal Party of Canada has proposed recruiting 1,000 additional police officers to address issues like drug and human trafficking, and has introduced Bill C-48 to implement targeted changes to the Criminal Code concerning repeat violent offenders. ([reuters.com](https://www.reuters.com/world/americas/key-promises-main-parties-contesting-canadas-election-2025-04-16/?utm_source=openai), [justice.gc.ca](https://www.justice.gc.ca/eng/trans/transition/2023/pocketbook-livredepoche/issues-enjeux.html?utm_source=openai))
+   - Position: -0.3
+
+subtopic: FreeSpeech
+- Justification: The Liberal Party supports the Online Harms Act, which imposes a duty of care on large social media platforms to mitigate harmful content, indicating a preference for government oversight to reduce harm and misinformation. ([en.wikipedia.org](https://en.wikipedia.org/wiki/Online_Harms_Act?utm_source=openai))
+   - Position: 0.5
+
+subtopic: PoliceReform
+- Justification: The party has committed to reforming the RCMP by enhancing oversight, prohibiting certain crowd control measures, and conducting external reviews of de-escalation training, reflecting a moderate stance towards police reform. ([liberal.ca](https://liberal.ca/our-platform/rcmp-reform/?utm_source=openai))
+   - Position: 0.3
+
+subtopic: ReligiousLiberty
+- Justification: There is insufficient recent information to determine the Liberal Party's specific stance on religious liberty.
+   - Position: 0.0
+
+
+```python
+{
+    "CriminalJustice": -0.3,
+    "FreeSpeech": 0.5,
+    "PoliceReform": 0.3,
+    "ReligiousLiberty": 0.0
+}
+```
+
+subtopic: Research
+- Justification: The Liberal Party of Canada has consistently advocated for substantial public investment in scientific research, as evidenced by their 2024 budget, which allocated nearly $5 billion to support Canadian researchers and infrastructure. ([deputypm.canada.ca](https://deputypm.canada.ca/en/news/news-releases/2024/05/30/budget-2024-supporting-next-generation-researchers-and-innovators?utm_source=openai))
+   - Position: **+0.9**
+
+subtopic: AI
+- Justification: The party has committed to proactive government involvement in AI, including a $2.4 billion package in the 2024 budget to accelerate job growth in Canada's AI sector and ensure responsible development and adoption of AI technologies. ([deputypm.canada.ca](https://deputypm.canada.ca/en/news/news-releases/2024/05/30/budget-2024-supporting-next-generation-researchers-and-innovators?utm_source=openai))
+   - Position: **+0.8**
+
+subtopic: Internet
+- Justification: While the Liberal Party has made investments in digital infrastructure, specific policies advocating for universal internet access as a public good are not prominently featured in recent platforms.
+   - Position: **0.0**
+
+subtopic: Privacy
+- Justification: The party has expressed support for strict data protection laws and user consent, but detailed recent policies or legislative actions in this area are not well-documented.
+   - Position: **0.0**
+
+
+```python
+{
+    "Research": 0.9,
+    "AI": 0.8,
+    "Internet": 0.0,
+    "Privacy": 0.0
+}
+```
+
+subtopic: Electoral
+- Justification: The Liberal Party has proposed electoral reforms such as expanding advance voting days and improving mail-in ballot processes, but has not pursued proportional representation or comprehensive electoral modernization. ([ctvnews.ca](https://www.ctvnews.ca/politics/liberals-readying-to-table-electoral-reform-legislation-1.6814769?utm_source=openai))
+   - Position: 0.2
+
+subtopic: Transparency
+- Justification: The Liberal Party has introduced measures to enhance electoral transparency, including banning foreign entities from influencing voters and prohibiting false statements about election activities. ([ctvnews.ca](https://www.ctvnews.ca/politics/liberals-readying-to-table-electoral-reform-legislation-1.6814769?utm_source=openai))
+   - Position: 0.4
+
+subtopic: Federalism
+- Justification: There is insufficient recent information to determine the Liberal Party's current stance on the balance of power between the federal government and provinces.
+   - Position: 0.0
+
+
+```python
+{
+    "Electoral": 0.2,
+    "Transparency": 0.4,
+    "Federalism": 0.0
+}
+```
+

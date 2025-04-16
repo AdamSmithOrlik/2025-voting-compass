@@ -1,0 +1,105 @@
+subtopic: Taxation
+position: -0.5
+
+subtopic: Spending
+position: -0.5
+
+subtopic: MinimumWage
+position: 0.0
+
+subtopic: FiscalDiscipline
+position: -0.5
+
+subtopic: LabourPolicy
+position: 0.0
+
+subtopic: Healthcare
+position: 0.0
+
+subtopic: Education
+position: 0.0
+
+subtopic: CurriculumControl
+position: 0.0
+
+subtopic: Housing
+position: -0.3
+
+subtopic: Indigenous
+position: -0.2
+
+subtopic: Immigration
+position: -0.5
+
+subtopic: LGBTQ
+position: -0.5
+
+subtopic: Drugs
+position: 0.0
+
+subtopic: DEI
+position: -0.5
+
+subtopic: Emissions
+position: -0.6
+
+subtopic: CarbonTax
+position: -1.0
+
+subtopic: FossilFuels
+position: -0.8
+
+subtopic: GreenInvestment
+position: 0.4
+
+subtopic: SpendingM
+position: 0.8
+
+subtopic: RefugeePolicy
+position: 0.0
+
+subtopic: Aid
+position: -0.8
+
+subtopic: Trade
+position: 0.5
+
+subtopic: IsraelPalestine
+position: 0.0
+
+subtopic: UkraineRussia
+position: 0.8
+
+subtopic: CriminalJustice
+position: -0.8
+
+subtopic: FreeSpeech
+position: -0.9
+
+subtopic: PoliceReform
+position: -0.7
+
+subtopic: ReligiousLiberty
+position: -0.6
+
+subtopic: Research
+position: -0.5
+
+subtopic: AI
+position: 0.5
+
+subtopic: Internet
+position: -0.5
+
+subtopic: Privacy
+position: 0.5
+
+subtopic: Electoral
+position: -0.9
+
+subtopic: Transparency
+position: 0.7
+
+subtopic: Federalism
+position: -0.5
+

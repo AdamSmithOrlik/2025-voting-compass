@@ -10,14 +10,6 @@ import os
 
 # load the party positions into the app 
 data_path = os.path.join(os.path.dirname(__file__), 'data')
-with open(data_path + '/aggregate_liberal_positions.pkl', 'rb') as f:
-    liberal_positions = pickle.load(f)
-
-with open(data_path + '/aggregate_conservative_positions.pkl', 'rb') as f:
-    conservative_positions = pickle.load(f)
-
-with open(data_path + '/aggregate_ndp_positions.pkl', 'rb') as f:
-    ndp_positions = pickle.load(f)
 
 ## Helper functions
 def render_subtopic_input(topic_name, subtopic_name, desc_neg1, desc_pos1):
@@ -397,6 +389,17 @@ def plot_pca_3d(user_positions, party_positions_dict, title="3D PCA: Political A
     plt.tight_layout()
     return fig
 
+def reorder_positions(reference_dict, target_dict):
+    reordered = {}
+    for topic in reference_dict:
+        reordered[topic] = {}
+        for subtopic in reference_dict[topic]:
+            if topic in target_dict and subtopic in target_dict[topic]:
+                reordered[topic][subtopic] = target_dict[topic][subtopic]
+            else:
+                raise KeyError(f"Missing {topic}:{subtopic} in target_dict")
+    return reordered
+
 ########################################################################
 ########################################################################
 # APP STARTS HERE
@@ -414,6 +417,17 @@ st.markdown("""
         2. Fixed Conservative positions for Military Spending and Foreign Aid
         3. Added a legend to visuals
         4. Minor aesthetic changes to Radar Plot
+      """)
+st.markdown("""
+
+    **Updates April 16, 2025:**
+
+        1. Added GPT-API party position data for greater transparency
+            - This data is generated using a fixed prompt and the GPT-API
+            - The data is stored in the `GPT-API/data/` folder 
+            - The data contains short justifications and sources for the positions
+            - The prompt can be read below in the "GPT-API Data" section
+            - Click the "GPT-API Data" before the survey to try it!
       """)
 
 # Introduction
@@ -528,8 +542,93 @@ with st.expander("Cautionary Notes", expanded=False):
 
     )
 
+with st.expander("GPT-API Data", expanded=False):
+    st.markdown(
+        """
+        In the interst of transparency I have added GPT-API data using a reuseable prompt. The responses are saved in JSON files found in the GPT-API/data/ folder. Each JSON file contains the GPT justifications, sources cited, and the final position. The prompt used to generate the data is as follows:
+    
+        PROMPT:
+        ---
+        You are an assistant tasked with estimating where the **new democratic party of Canada** stands on a range of Canadian policy subtopics.
+
+        Each subtopic has been defined using a fixed ideological scale from -1.0 to 1.0:
+
+        - **-1.0** corresponds to strong alignment with the conservative, libertarian, or right-leaning interpretation.
+        - **+1.0** corresponds to strong alignment with the progressive, interventionist, or left-leaning interpretation.
+
+        Each subtopic is anchored by opposing ideological descriptions, as shown in the dictionary `topic_definitions`. Each entry includes:
+        - A description for `-1`
+        - A description for `1`
+        - Where 0 is assumed to be the status quo or neutral position.
+
+        **SUBSET OF SUBTOPICS FOR EXAMPLE:**
+
+        Foreign Policy:
+
+        SpendingMilitary:\n
+            -1:"Cut military spending, avoid foreign entanglements",
+            1:"Increase defense funding, strong global presence"
+        RefugeePolicy:\n
+            -1:"Tight border controls; reduce intake to preserve resources and safety",
+            1:"Expand humanitarian response; Canada has global responsibility"
+        Aid:\n 
+            -1:"Reduce foreign aid, focus on domestic issues",
+            1:"Expand international aid, climate and human rights"
+
+
+        ---
+
+        Your task is to:
+        1. Use only **recent, credible, and verifiable sources** (e.g. party platforms, official websites, news outlets, voting records), prioritizing content from **2023–2025**.
+        2. Remain **completely unbiased** and analytical.
+        3. If a party’s stance falls within a range (e.g. 0.5–0.6), round conservatively to the **lower bound**.
+        4. For each subtopic:
+        - Determine the party's position on the subtopic using the definitions provided and assign a numerical value based on the topic scale between -1 and 1.
+        - Avoid extreme -1 or 1 unless the party's position is unequivocally aligned with those extremes.
+        - If the party's position is unclear or not well-defined, assign a value of **0.0**.
+
+        ---
+
+        Your response needs to be in the following format:
+        1. Subtopic name 
+            - "Justification: <A short one sentence justification for the position.>"
+            - "Position: <A numerical value between -1 and 1>"
+        2. Repeat for each subtopic.
+        3. End each answer with a python dictionary containing the subtopic names and their corresponding positions.
+
+        Note:
+        - Ensure that you provide a numerical value for each subtopic position. If the evidence is weak or unclear, assign a value of 0.0.
+
+        Begin your analysis for the **new democratic party of Canada** now.
+        """
+    )
 # USER INPUT
+
 st.header("Your Political Compass")
+st.markdown("### Choose party data source")
+data_source = st.radio(
+    label="Select which dataset you want to use:",
+    options=["Aggregated Data", "GPT-API Data"],
+    index=0,  # Default to aggregated
+    horizontal=True
+)
+
+if data_source == "Aggregated Data":
+    with open(data_path + '/aggregate_liberal_positions.pkl', 'rb') as f:
+        liberal_positions = pickle.load(f)
+    with open(data_path + '/aggregate_conservative_positions.pkl', 'rb') as f:
+        conservative_positions = pickle.load(f)
+    with open(data_path + '/aggregate_ndp_positions.pkl', 'rb') as f:
+        ndp_positions = pickle.load(f)
+else:
+    # Load GPT data
+    with open(os.path.join(data_path, 'GPT_liberal.pkl'), 'rb') as f:
+        liberal_positions = pickle.load(f)
+    with open(os.path.join(data_path, 'GPT_conservative.pkl'), 'rb') as f:
+        conservative_positions = pickle.load(f)
+    with open(os.path.join(data_path, 'GPT_ndp.pkl'), 'rb') as f:
+        ndp_positions = pickle.load(f)
+
 
 user_inputs = {}
 
@@ -565,6 +664,7 @@ with st.form("survey"):
     # START OF RESULTS
     st.divider()
     if submitted:
+
         st.header("Distance Metrics Main Results")
         # normalize the users weights 
         normalized_inputs = normalize_user_weigths(user_inputs)
