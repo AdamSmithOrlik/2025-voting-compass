@@ -168,8 +168,8 @@ topic_definitions = {
             "Reform or reduce police funding; invest in alternatives like mental health and community response"
         ),
         "ReligiousLiberty": (
-            "Supports strict secularism; limits religious expression in public institutions (e.g. bans on symbols, prayer)",
-            "Strongly protects freedom of religion in all domains; faith-based institutions and expression should be fully accommodated"
+            "Strongly protects freedom of religion in all domains; faith-based institutions and expression should be fully accommodated",
+            "Supports strict secularism; limits religious expression in public institutions (e.g. bans on symbols, prayer)"
         ),
     },
     "Science": {
@@ -406,6 +406,17 @@ st.set_page_config(page_title="2025 Elections Compass", layout="wide")
 st.title("2025 Canadian Federal Elections Compass")
 st.markdown("""### Author: Adam Smith-Orlik""")
 
+st.markdown("""Updates April 15, 2025:
+
+    - Fixed Religious Liberty scale to reflect the correct Left/Right positions
+
+    - Fixed Conservative positions for Military Spending and Foreign Aid
+
+    - Added a legend to visuals
+
+    - Minor aesthetic changes to Radar Plot
+        """)
+
 # Introduction
 st.markdown(
     """
@@ -474,6 +485,7 @@ with st.expander("Methods", expanded=False):
                 - Civil Liberties 
                 - Free Speech 
                 - Police Reform
+                - Religious Liberty
             6. Science and Technology
                 - Research Funding
                 - AI Regulation
@@ -691,6 +703,10 @@ with st.form("survey"):
         st.divider()
         st.header("Visualizing the Data")
 
+        st.subheader("Legend for Visuals")
+        st.markdown("⚫ **Black** = You &nbsp; &nbsp; 🔵 **Blue** = Conservative &nbsp; &nbsp; 🔴 **Red** = Liberal &nbsp; &nbsp; 🟠 **Orange** = NDP")
+
+
         st.markdown("### Subtopic Numberline Plots")
 
         st.markdown(
@@ -748,23 +764,27 @@ with st.form("survey"):
 
         def close(values): return values + values[:1]
 
-        with st.expander("Radar Plot: Alignment by Topic"):
+        with st.expander("Radar Plot: Alignment by Topic", expanded=True):
             fig, ax = plt.subplots(figsize=(6, 6), subplot_kw=dict(polar=True))
 
-            ax.plot(angles, close([my_avg[k] for k in labels]), color='black', label="You")
+            ax.plot(angles, close([my_avg[k] for k in labels]), color='black', label="You", zorder=10)
             ax.plot(angles, close([lib_avg[k] for k in labels]), color='red', label="Liberal")
             ax.plot(angles, close([con_avg[k] for k in labels]), color='blue', label="Conservative")
             ax.plot(angles, close([ndp_avg[k] for k in labels]), color='orange', label="NDP")
-            ax.fill(angles, close([my_avg[k] for k in labels]), color='black', alpha=0.1)
+            # ax.plot(angles, close([my_avg[k] for k in labels]), color='black', zorder=10)
 
             # remove the axis numbers titles 
             ax.set_yticklabels([])
 
             ax.set_thetagrids(np.degrees(angles[:-1]), labels)
             ax.set_ylim(-1, 1)
-            ax.set_title("Political Alignment by Topic", size=12)
+            # Add a thick gray ring at r=0 to indicate centrist position
+            ax.plot(np.linspace(0, 2 * np.pi, 500), np.zeros(500), color='gray', linewidth=2, label='Centrist Positions')
+
+            ax.set_title("Weighted Average by Topic", size=12)
             ax.legend(loc='lower left', bbox_to_anchor=(0.9, 0.1))
             ax.grid(color='k', linestyle='-', linewidth=0.5, alpha=0.2)
+            ax.tick_params(pad=10) 
             st.pyplot(fig)
 
         st.markdown("### 2D PCA Plot")
