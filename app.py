@@ -413,26 +413,22 @@ st.set_page_config(page_title="2025 Elections Compass", layout="wide")
 st.title("2025 Canadian Federal Elections Compass")
 st.markdown("""### Author: Adam Smith-Orlik""")
 
-st.markdown("""
-
-    **Updates April 15, 2025:**
-
-        1. Fixed Religious Liberty scale to reflect the correct Left/Right positions
-        2. Fixed Conservative positions for Military Spending and Foreign Aid
-        3. Added a legend to visuals
-        4. Minor aesthetic changes to Radar Plot
-      """)
-st.markdown("""
-
-    **Updates April 16, 2025:**
-
-        1. Added GPT-API party position data for greater transparency
-            - This data is generated using a fixed prompt and the GPT-API
-            - The data is stored in the `GPT-API/data/` folder 
-            - The data contains short justifications and sources for the positions
-            - The prompt can be read below in the "GPT-API Data" section
-            - Click the "GPT-API Data" before the survey to try it!
-      """)
+with st.expander("Updates April 15, 2025"):
+    st.markdown("""
+            1. Fixed Religious Liberty scale to reflect the correct Left/Right positions
+            2. Fixed Conservative positions for Military Spending and Foreign Aid
+            3. Added a legend to visuals
+            4. Minor aesthetic changes to Radar Plot
+        """)
+with st.expander("Updates April 16, 2025"):
+    st.markdown("""
+            1. Added GPT-API party position data for greater transparency
+                - This data is generated using a fixed prompt and the GPT-API
+                - The data is stored in the `GPT-API/data/` folder 
+                - The data contains short justifications and sources for the positions
+                - The prompt can be read below in the "GPT-API Data" section
+                - Click the "GPT-API Data" before the survey to try it!
+        """)
 
 # Introduction
 st.markdown(
