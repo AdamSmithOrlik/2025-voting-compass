@@ -549,7 +549,7 @@ with st.expander("Cautionary Notes", expanded=False):
 with st.expander("GPT-API Data", expanded=False):
     st.markdown(
         """
-        In the interst of transparency I have added GPT-API data using a reuseable prompt. The responses are saved in JSON files found in the GPT-API/data/ folder. Each JSON file contains the GPT justifications, sources cited, and the final position. The prompt used to generate the data is as follows:
+        In the interest of transparency I have added GPT-API data using a reusable prompt. The responses are saved in JSON files found in the GPT-API/data/ folder. Each JSON file contains the GPT justifications, sources cited, and the final position. The prompt used to generate the data is as follows:
     
         PROMPT:
         ---
