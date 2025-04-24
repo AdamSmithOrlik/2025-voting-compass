@@ -1,3 +1,12 @@
+####################################################
+# Author: Adam Smith-Orlik                         #
+# Date: 21-04-2025                                 # 
+# Description: Tools for calculating the           #
+# Euclidean distance and Cosine similarity metris  #
+# email: asorlik@yorku.ca                          #
+# status: Complete                                 #
+####################################################
+
 import numpy as np
 
 def normalize_user_weigths(x: dict) -> dict:
