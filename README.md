@@ -1,8 +1,8 @@
 # 2025 Canadian Federal Election Compass
 
 **Author**: Adam Smith-Orlik  
-**Version**: 1.0.3  
-**Last Updated**: April 16, 2025
+**Version**: 1.0.4
+**Last Updated**: April 24, 2025
 
 **Updates**
 April 15, 2025
@@ -17,6 +17,11 @@ April 16, 2025
 1. Added GPT-API results with justifications for tranparency
 2. Added button before survey to change the party position data
 3. GPT responses saved for fact chacking in the GPT-API/data/ folder
+
+April 24, 2025
+
+1. Added updated data based on the 2025 party platforms
+2. Refactored the codebase for readability
 
 ---
 
