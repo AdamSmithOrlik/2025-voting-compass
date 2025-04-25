@@ -1,5 +1,7 @@
 # 2025 Canadian Federal Election Compass
 
+The Compass can be accessed here: https://2025-voting-compass.streamlit.app/
+
 **Author**: Adam Smith-Orlik  
 **Version**: 1.0.4
 **Last Updated**: April 24, 2025
